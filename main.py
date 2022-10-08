@@ -3,7 +3,7 @@ import sqlite3
 from config import TOKEN
 import telebot
 from telebot import types
-import random
+import random2 as random
 
 bot = telebot.TeleBot(token=TOKEN)
 
