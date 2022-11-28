@@ -1,1 +1,1 @@
-TOKEN = 'Your_token_from_bot_father'
+TOKEN = 'Your_token_from_botFather'
