@@ -32,7 +32,9 @@ def joke(message):
     item1 = types.KeyboardButton('Бомбер')
     item2 = types.KeyboardButton('Давай еще одну')
     item3 = types.KeyboardButton("Тех. поддержка")
-    markup.add(item1,item2,item3)
+    item4 = types.KeyboardButton("Создатели")
+    item5 = types.KeyboardButton("Инфа")
+    markup.add(item1,item2,item3,item4,item5)
 
     bot.send_message(message.chat.id, text=[i[1] for i in record], reply_markup=markup)
 
@@ -148,6 +150,10 @@ def answer(message):
                 bot.send_message(message.chat.id, "Такого пользователя итак нет!")
         elif message.text == "Тех. поддержка":
             bot.send_message(message.chat.id, "Если у вас возникли вопросы по боту, то напишите сюда\n->  @nechyrkaser")
+        elif message.text == "Создатели":
+            bot.send_message(message.chat.id, "Кирилл Анатольевич Секс\nСерега Тикет\nМакс Нихуясебесович\nКакой-то злодей британец\nГорячая чикса и другие")
+        elif message.text == "Инфа":
+            bot.send_message(message.chat.id, str(message.from_user))
 @bot.callback_query_handler(func = lambda call: True)
 def callback(call):
     if call.message:
